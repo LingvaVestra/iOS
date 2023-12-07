@@ -79,7 +79,7 @@ extension BaseViewController {
         navigationController?.popViewController(animated: animated)
     }
 
-    /// Pops all the view controllers from the navigation stack except the root view controller with an option for animation.
+    /// Pops all the view controllers from the navigation stack except the root view controller.`.
     ///
     /// - Parameter animated: A flag determining whether to animate the transition.
     func popToRoot(animated: Bool = true) {
