@@ -81,10 +81,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 747CC1812B1FA3A60017DBA0 /* Build configuration list for PBXNativeTarget "LingvaVestra" */;
 			buildPhases = (
+				A0634B332B209715006A4605 /* Swiftlint */,
 				747CC1692B1FA3A50017DBA0 /* Sources */,
 				747CC16A2B1FA3A50017DBA0 /* Frameworks */,
 				747CC16B2B1FA3A50017DBA0 /* Resources */,
-				A0634B332B209715006A4605 /* Swiftlint */,
 			);
 			buildRules = (
 			);
