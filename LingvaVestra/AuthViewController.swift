@@ -7,12 +7,22 @@
 
 import UIKit
 
-final class AuthViewController: UIViewController {
-    
+final class AuthViewController: BaseViewController {
+
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemBackground
+    }
+}
+
+// MARK: - Setup Subviews
+
+extension AuthViewController {
+
+    override func setupSubviews() {
+        super.setupSubviews()
+
         title = "Login screen"
     }
 }

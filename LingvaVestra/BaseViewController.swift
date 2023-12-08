@@ -108,7 +108,7 @@ extension BaseViewController {
 
 // MARK: - Setup Subviews
 
-extension BaseViewController {
+@objc extension BaseViewController {
 
     /// Configures the subviews of the controller.
     func setupSubviews() {
