@@ -10,16 +10,17 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    private let navigationManager: NavigationProtocol = NavigationManager.shared
+
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: scene)
         
-        NavigationManager.shared.setWindow(window)
+        navigationManager.setWindow(window)
 
         // change later: checking if authorized and set the root
-        NavigationManager.shared.navigate(.auth)
+        navigationManager.navigate(.auth)
     }
 }

@@ -9,11 +9,6 @@ import UIKit
 
 final class AuthViewController: BaseViewController {
 
-    // MARK: - Life cycle
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
 // MARK: - Setup Subviews

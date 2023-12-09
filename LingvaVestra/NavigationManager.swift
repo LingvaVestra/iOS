@@ -12,6 +12,11 @@ enum Route {
     case tabBar
 }
 
+protocol NavigationProtocol {
+    func setWindow(_ window: UIWindow?)
+    func navigate(_ route: Route)
+}
+
 final class NavigationManager {
 
     static let shared = NavigationManager()
@@ -19,6 +24,11 @@ final class NavigationManager {
 
     private init() {}
 
+}
+
+// MARK: - NavigationProtocol
+
+extension NavigationManager: NavigationProtocol {
     /// Sets the main window for the app.
     func setWindow(_ window: UIWindow?) {
         self.window = window
@@ -38,6 +48,7 @@ final class NavigationManager {
         }
     }
 }
+
 // MARK: - Private methods
 
 private extension NavigationManager {
