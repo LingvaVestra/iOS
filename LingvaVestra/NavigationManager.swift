@@ -44,7 +44,7 @@ extension NavigationManager: NavigationProtocol {
         case .auth:
             setRootController(createAuthViewController())
         case .tabBar:
-            setRootController(createTabBarController())
+            setRootController(createMainTabBarController())
         }
     }
 }
@@ -64,8 +64,7 @@ private extension NavigationManager {
         return navigationController
     }
 
-    func createTabBarController() -> UITabBarController {
-        // change later: return BaseTabBarController
-        UITabBarController()
+    func createMainTabBarController() -> UITabBarController {
+        BaseTabBarController(barType: .root)
     }
 }
