@@ -8,6 +8,7 @@
 import Foundation
 
 protocol MainPresenterProtocol: BasePresenterProtocol {
+    /// Called when the logout button is tapped.
     func logoutDidTap()
 }
 
@@ -17,8 +18,8 @@ final class MainPresenter {
     
     weak var view: MainViewProtocol?
     
-    var navigationManager: NavigationProtocol?
-    
+    var router: MainRouterProtocol?
+
 }
 
 // MARK: - Presenter Protocol 
@@ -31,6 +32,6 @@ extension MainPresenter: MainPresenterProtocol {
     }
     
     func logoutDidTap() {
-        navigationManager?.navigate(.auth)
+        router?.routToAuth()
     }
 }

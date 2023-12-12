@@ -12,7 +12,12 @@ enum TabBarType {
 }
 
 final class BaseTabBarController: UITabBarController {
+   
+    // MARK: - Private properties
+
     private var barType: TabBarType
+
+    // MARK: - init
 
     init(barType: TabBarType) {
         self.barType = barType
@@ -23,8 +28,11 @@ final class BaseTabBarController: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupInterface()
 
         switch barType {
@@ -43,7 +51,7 @@ private extension BaseTabBarController {
     }
 
     func setupRootTabBar() {
-        let mainVC = MainConfigurator().configure()
+        let mainVC = MainAssembler().assembly()
 
         let mainNC = UINavigationController(rootViewController: mainVC)
         mainNC.tabBarItem = UITabBarItem(.main)

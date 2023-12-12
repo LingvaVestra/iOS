@@ -16,6 +16,7 @@ private enum Constants {
 }
 
 protocol MainViewProtocol: BaseViewProtocol {
+    /// Notifies that new data has been received.
     func didReceiveData()
 }
 

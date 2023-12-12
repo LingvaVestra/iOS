@@ -19,10 +19,11 @@
 		A054D5BF2B22FB2300BC30B3 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */; };
 		A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5C02B2302F300BC30B3 /* AuthViewController.swift */; };
 		A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065B3562B247E4D00589B98 /* TabDetail.swift */; };
+		A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CCC1E2B28359100EAC318 /* MainRouter.swift */; };
 		A0A572AF2B245844000452DF /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572AE2B245844000452DF /* BaseTabBarController.swift */; };
 		A0A572B22B245B4F000452DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B12B245B4F000452DF /* MainViewController.swift */; };
 		A0A572B42B245B6E000452DF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B32B245B6E000452DF /* MainPresenter.swift */; };
-		A0A572B62B245B7B000452DF /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B52B245B7B000452DF /* MainConfigurator.swift */; };
+		A0A572B62B245B7B000452DF /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B52B245B7B000452DF /* MainAssembler.swift */; };
 		A0A572B82B24676C000452DF /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B72B24676C000452DF /* BaseViewProtocol.swift */; };
 		A0A572BA2B2467BD000452DF /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B92B2467BD000452DF /* BasePresenterProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -40,10 +41,11 @@
 		A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A054D5C02B2302F300BC30B3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		A065B3562B247E4D00589B98 /* TabDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetail.swift; sourceTree = "<group>"; };
+		A08CCC1E2B28359100EAC318 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		A0A572AE2B245844000452DF /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		A0A572B12B245B4F000452DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A0A572B32B245B6E000452DF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		A0A572B52B245B7B000452DF /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		A0A572B52B245B7B000452DF /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		A0A572B72B24676C000452DF /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
 		A0A572B92B2467BD000452DF /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +122,8 @@
 			children = (
 				A0A572B12B245B4F000452DF /* MainViewController.swift */,
 				A0A572B32B245B6E000452DF /* MainPresenter.swift */,
-				A0A572B52B245B7B000452DF /* MainConfigurator.swift */,
+				A0A572B52B245B7B000452DF /* MainAssembler.swift */,
+				A08CCC1E2B28359100EAC318 /* MainRouter.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A572AF2B245844000452DF /* BaseTabBarController.swift in Sources */,
+				A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */,
 				A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */,
 				747CC1752B1FA3A50017DBA0 /* ViewController.swift in Sources */,
 				A054D5BD2B21DEE800BC30B3 /* BaseViewController.swift in Sources */,
@@ -238,7 +242,7 @@
 				A0A572B22B245B4F000452DF /* MainViewController.swift in Sources */,
 				A0A572B82B24676C000452DF /* BaseViewProtocol.swift in Sources */,
 				A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */,
-				A0A572B62B245B7B000452DF /* MainConfigurator.swift in Sources */,
+				A0A572B62B245B7B000452DF /* MainAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
