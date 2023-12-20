@@ -15,6 +15,14 @@
 		747CC17D2B1FA3A60017DBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747CC17B2B1FA3A60017DBA0 /* LaunchScreen.storyboard */; };
 		A0059D232B205AA4001C3CE5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0059D222B205AA4001C3CE5 /* SnapKit */; };
 		A0059D252B205AA4001C3CE5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A0059D242B205AA4001C3CE5 /* SnapKit-Dynamic */; };
+		A0451E092B3301F400DBAD47 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */; };
+		A0451E0B2B33020200DBAD47 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E0A2B33020200DBAD47 /* DictionaryPresenter.swift */; };
+		A0451E0D2B33020E00DBAD47 /* DictionaryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E0C2B33020E00DBAD47 /* DictionaryAssembler.swift */; };
+		A0451E0F2B33021700DBAD47 /* DictionaryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E0E2B33021700DBAD47 /* DictionaryRouter.swift */; };
+		A0451E112B3303CA00DBAD47 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E102B3303CA00DBAD47 /* ProfileViewController.swift */; };
+		A0451E132B3303D500DBAD47 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E122B3303D500DBAD47 /* ProfilePresenter.swift */; };
+		A0451E152B3303DC00DBAD47 /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E142B3303DC00DBAD47 /* ProfileAssembler.swift */; };
+		A0451E172B3303E700DBAD47 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E162B3303E700DBAD47 /* ProfileRouter.swift */; };
 		A054D5BD2B21DEE800BC30B3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5BC2B21DEE800BC30B3 /* BaseViewController.swift */; };
 		A054D5BF2B22FB2300BC30B3 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */; };
 		A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5C02B2302F300BC30B3 /* AuthViewController.swift */; };
@@ -37,6 +45,14 @@
 		747CC1792B1FA3A60017DBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		747CC17C2B1FA3A60017DBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747CC17E2B1FA3A60017DBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		A0451E0A2B33020200DBAD47 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
+		A0451E0C2B33020E00DBAD47 /* DictionaryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembler.swift; sourceTree = "<group>"; };
+		A0451E0E2B33021700DBAD47 /* DictionaryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryRouter.swift; sourceTree = "<group>"; };
+		A0451E102B3303CA00DBAD47 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A0451E122B3303D500DBAD47 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		A0451E142B3303DC00DBAD47 /* ProfileAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
+		A0451E162B3303E700DBAD47 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		A054D5BC2B21DEE800BC30B3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A054D5C02B2302F300BC30B3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +114,28 @@
 			path = LingvaVestra;
 			sourceTree = "<group>";
 		};
+		A0451E062B33019A00DBAD47 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */,
+				A0451E0A2B33020200DBAD47 /* DictionaryPresenter.swift */,
+				A0451E0E2B33021700DBAD47 /* DictionaryRouter.swift */,
+				A0451E0C2B33020E00DBAD47 /* DictionaryAssembler.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		A0451E072B3301A600DBAD47 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A0451E102B3303CA00DBAD47 /* ProfileViewController.swift */,
+				A0451E122B3303D500DBAD47 /* ProfilePresenter.swift */,
+				A0451E162B3303E700DBAD47 /* ProfileRouter.swift */,
+				A0451E142B3303DC00DBAD47 /* ProfileAssembler.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		A048BFC32B2493FA000E714B /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				A0A572B02B245B08000452DF /* Main */,
+				A0451E062B33019A00DBAD47 /* Dictionary */,
+				A0451E072B3301A600DBAD47 /* Profile */,
 			);
 			path = RootTabBar;
 			sourceTree = "<group>";
@@ -122,8 +162,8 @@
 			children = (
 				A0A572B12B245B4F000452DF /* MainViewController.swift */,
 				A0A572B32B245B6E000452DF /* MainPresenter.swift */,
-				A0A572B52B245B7B000452DF /* MainAssembler.swift */,
 				A08CCC1E2B28359100EAC318 /* MainRouter.swift */,
+				A0A572B52B245B7B000452DF /* MainAssembler.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -229,19 +269,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0451E0F2B33021700DBAD47 /* DictionaryRouter.swift in Sources */,
+				A0451E092B3301F400DBAD47 /* DictionaryViewController.swift in Sources */,
 				A0A572AF2B245844000452DF /* BaseTabBarController.swift in Sources */,
+				A0451E0B2B33020200DBAD47 /* DictionaryPresenter.swift in Sources */,
 				A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */,
 				A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */,
 				747CC1752B1FA3A50017DBA0 /* ViewController.swift in Sources */,
 				A054D5BD2B21DEE800BC30B3 /* BaseViewController.swift in Sources */,
 				A0A572B42B245B6E000452DF /* MainPresenter.swift in Sources */,
+				A0451E112B3303CA00DBAD47 /* ProfileViewController.swift in Sources */,
+				A0451E172B3303E700DBAD47 /* ProfileRouter.swift in Sources */,
 				747CC1712B1FA3A50017DBA0 /* AppDelegate.swift in Sources */,
+				A0451E152B3303DC00DBAD47 /* ProfileAssembler.swift in Sources */,
 				747CC1732B1FA3A50017DBA0 /* SceneDelegate.swift in Sources */,
 				A054D5BF2B22FB2300BC30B3 /* NavigationManager.swift in Sources */,
 				A0A572BA2B2467BD000452DF /* BasePresenterProtocol.swift in Sources */,
 				A0A572B22B245B4F000452DF /* MainViewController.swift in Sources */,
+				A0451E0D2B33020E00DBAD47 /* DictionaryAssembler.swift in Sources */,
 				A0A572B82B24676C000452DF /* BaseViewProtocol.swift in Sources */,
 				A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */,
+				A0451E132B3303D500DBAD47 /* ProfilePresenter.swift in Sources */,
 				A0A572B62B245B7B000452DF /* MainAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

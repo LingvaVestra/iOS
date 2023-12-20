@@ -5,8 +5,6 @@
 //  Created by Sergey Pavlov on 09.12.2023.
 //
 
-import Foundation
-
 final class MainAssembler {
 
     /// Assembly the main components for the main screen.

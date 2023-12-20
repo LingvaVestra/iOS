@@ -51,11 +51,30 @@ private extension BaseTabBarController {
     }
 
     func setupRootTabBar() {
+
+        // MARK: - Main tab bar
+
         let mainVC = MainAssembler().assembly()
 
         let mainNC = UINavigationController(rootViewController: mainVC)
         mainNC.tabBarItem = UITabBarItem(.main)
 
-        viewControllers = [mainNC]
+        // MARK: - Dictionary tab bar
+
+        let dictionaryVC = DictionaryAssembler().assembly()
+
+        let dictionaryNC = UINavigationController(rootViewController: dictionaryVC)
+        dictionaryNC.tabBarItem = UITabBarItem(.dictionary)
+
+        // MARK: - Profile tab bar
+
+        let profileVC = ProfileAssembler().assembly()
+
+        let profileNC = UINavigationController(rootViewController: profileVC)
+        profileNC.tabBarItem = UITabBarItem(.profile)
+
+        // MARK: - Controllers
+
+        viewControllers = [mainNC, dictionaryNC, profileNC]
     }
 }
