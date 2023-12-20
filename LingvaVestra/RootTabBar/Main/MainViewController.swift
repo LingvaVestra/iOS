@@ -9,10 +9,10 @@ import UIKit
 import SnapKit
 
 private enum Constants {
-    static let topPadding: CGFloat = 20
-    static let logoutButtonWidth: CGFloat = 100
-    static let logoutButtonHeight: CGFloat = 44
-    static let logoutCornerRadius: CGFloat = 10
+    static let topPadding: CGFloat = 20.0
+    static let logoutButtonWidth: CGFloat = 100.0
+    static let logoutButtonHeight: CGFloat = 44.0
+    static let logoutCornerRadius: CGFloat = 10.0
 }
 
 protocol MainViewProtocol: BaseViewProtocol {
@@ -77,6 +77,7 @@ extension MainViewController {
 // MARK: - View Protocol
 
 extension MainViewController: MainViewProtocol {
+    /// Notifies that new data has been received.
     func didReceiveData() {
         // update Interface with data
     }

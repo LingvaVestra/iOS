@@ -16,14 +16,19 @@ final class MainRouter {
 
     // MARK: - Properties
 
-    var navigationManager: NavigationProtocol?
+    private var navigationManager: NavigationProtocol
 
+    // MARK: - init
+    init(navigationManager: NavigationProtocol) {
+        self.navigationManager = navigationManager
+    }
 }
 
 // MARK: - Router Protocol
 
 extension MainRouter: MainRouterProtocol {
+    /// Navigate to the authentication screen.
     func routToAuth() {
-        navigationManager?.navigate(.auth)
+        navigationManager.navigate(.auth)
     }
 }

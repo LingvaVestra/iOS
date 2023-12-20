@@ -14,14 +14,11 @@ final class MainAssembler {
     /// - Returns: An instance of `MainViewController` configured with its associated presenter and router.
     func assembly() -> MainViewController {
         let view = MainViewController()
-        let presenter = MainPresenter()
-        let router = MainRouter()
         let navigationManager = NavigationManager.shared
+        let router = MainRouter(navigationManager: navigationManager)
+        let presenter = MainPresenter(view: view, router: router)
 
         view.presenter = presenter
-        presenter.view = view
-        presenter.router = router
-        router.navigationManager = navigationManager
 
         return view
     }

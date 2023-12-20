@@ -18,8 +18,13 @@ final class MainPresenter {
     
     weak var view: MainViewProtocol?
     
-    var router: MainRouterProtocol?
+    private var router: MainRouterProtocol
 
+    // MARK: - init
+    init(view: MainViewProtocol?, router: MainRouterProtocol) {
+        self.view = view
+        self.router = router
+    }
 }
 
 // MARK: - Presenter Protocol 
@@ -30,8 +35,9 @@ extension MainPresenter: MainPresenterProtocol {
         // Logic after loading view, get data from network
         view?.didReceiveData()
     }
-    
+
+    /// Called when the logout button is tapped.
     func logoutDidTap() {
-        router?.routToAuth()
+        router.routToAuth()
     }
 }
