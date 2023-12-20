@@ -14,7 +14,7 @@ protocol MainRouterProtocol {
 
 final class MainRouter {
 
-    // MARK: - Properties
+    // MARK: - Dependencies
 
     private var navigationManager: NavigationProtocol
 

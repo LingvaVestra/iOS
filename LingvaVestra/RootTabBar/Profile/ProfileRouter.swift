@@ -12,7 +12,7 @@ protocol ProfileRouterProtocol {
 
 final class ProfileRouter {
 
-    // MARK: - Properties
+    // MARK: - Dependencies
 
     private var navigationManager: NavigationProtocol
 

@@ -14,7 +14,7 @@ protocol MainPresenterProtocol: BasePresenterProtocol {
 
 final class MainPresenter {
     
-    // MARK: - Properties
+    // MARK: - Dependencies
     
     weak var view: MainViewProtocol?
     

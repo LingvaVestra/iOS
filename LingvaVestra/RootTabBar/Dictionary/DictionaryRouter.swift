@@ -12,7 +12,7 @@ protocol DictionaryRouterProtocol {
 
 final class DictionaryRouter {
 
-    // MARK: - Properties
+    // MARK: - Dependencies
 
     private var navigationManager: NavigationProtocol
 

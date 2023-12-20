@@ -12,7 +12,7 @@ protocol DictionaryPresenterProtocol: BasePresenterProtocol {
 
 final class DictionaryPresenter {
 
-    // MARK: - Properties
+    // MARK: - Dependencies
 
     weak var view: DictionaryViewProtocol?
 

@@ -12,7 +12,7 @@ protocol ProfilePresenterProtocol: BasePresenterProtocol {
 
 final class ProfilePresenter {
 
-    // MARK: - Properties
+    // MARK: - Dependencies
 
     weak var view: ProfileViewProtocol?
 
