@@ -14,13 +14,14 @@ protocol MainPresenterProtocol: BasePresenterProtocol {
 
 final class MainPresenter {
     
-    // MARK: - Properties
+    // MARK: - Dependencies
     
     weak var view: MainViewProtocol?
     
     private var router: MainRouterProtocol
 
     // MARK: - init
+    
     init(view: MainViewProtocol?, router: MainRouterProtocol) {
         self.view = view
         self.router = router

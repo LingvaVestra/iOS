@@ -12,7 +12,7 @@ enum TabBarType {
 }
 
 final class BaseTabBarController: UITabBarController {
-   
+
     // MARK: - Private properties
 
     private var barType: TabBarType
@@ -32,7 +32,7 @@ final class BaseTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupInterface()
 
         switch barType {
@@ -51,11 +51,30 @@ private extension BaseTabBarController {
     }
 
     func setupRootTabBar() {
+
+        // MARK: - Main tab item
+
         let mainVC = MainAssembler().assembly()
 
         let mainNC = UINavigationController(rootViewController: mainVC)
         mainNC.tabBarItem = UITabBarItem(.main)
 
-        viewControllers = [mainNC]
+        // MARK: - Dictionary tab item
+
+        let dictionaryVC = DictionaryAssembler().assembly()
+
+        let dictionaryNC = UINavigationController(rootViewController: dictionaryVC)
+        dictionaryNC.tabBarItem = UITabBarItem(.dictionary)
+
+        // MARK: - Profile tab item
+
+        let profileVC = ProfileAssembler().assembly()
+
+        let profileNC = UINavigationController(rootViewController: profileVC)
+        profileNC.tabBarItem = UITabBarItem(.profile)
+
+        // MARK: - Controllers
+
+        viewControllers = [mainNC, dictionaryNC, profileNC]
     }
 }
