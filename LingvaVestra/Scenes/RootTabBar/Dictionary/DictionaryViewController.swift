@@ -19,6 +19,7 @@ protocol DictionaryViewProtocol: BaseViewProtocol {
 }
 
 final class DictionaryViewController: BaseViewController {
+    
     // MARK: - Properties
 
     var presenter: DictionaryPresenterProtocol!
@@ -42,6 +43,7 @@ final class DictionaryViewController: BaseViewController {
     }
 
     // MARK: - Actions
+    
     @objc
     private func logoutDidTap() {
         presenter.logoutDidTap()

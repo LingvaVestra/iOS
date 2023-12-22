@@ -21,6 +21,7 @@ protocol MainViewProtocol: BaseViewProtocol {
 }
 
 final class MainViewController: BaseViewController {
+
     // MARK: - Properties
     
     var presenter: MainPresenterProtocol!
@@ -44,6 +45,7 @@ final class MainViewController: BaseViewController {
     }
     
     // MARK: - Actions
+    
     @objc
     private func logoutDidTap() {
         presenter.logoutDidTap()

@@ -1,36 +1,35 @@
 //
-//  MainPresenter.swift
+//  ProfilePresenter.swift
 //  LingvaVestra
-//
-//  Created by Sergey Pavlov on 09.12.2023.
 //
 
 import Foundation
 
-protocol MainPresenterProtocol: BasePresenterProtocol {
+protocol ProfilePresenterProtocol: BasePresenterProtocol {
     /// Called when the logout button is tapped.
     func logoutDidTap()
 }
 
-final class MainPresenter {
-    
+final class ProfilePresenter {
+
     // MARK: - Dependencies
-    
-    weak var view: MainViewProtocol?
-    
-    private var router: MainRouterProtocol
+
+    weak var view: ProfileViewProtocol?
+
+    private var router: ProfileRouterProtocol
 
     // MARK: - init
-    init(view: MainViewProtocol?, router: MainRouterProtocol) {
+    
+    init(view: ProfileViewProtocol?, router: ProfileRouterProtocol) {
         self.view = view
         self.router = router
     }
 }
 
-// MARK: - Presenter Protocol 
+// MARK: - Presenter Protocol
 
-extension MainPresenter: MainPresenterProtocol {
-    
+extension ProfilePresenter: ProfilePresenterProtocol {
+
     func viewDidLoad() {
         // Logic after loading view, get data from network
         view?.didReceiveData()

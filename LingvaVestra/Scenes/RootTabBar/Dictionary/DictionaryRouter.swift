@@ -17,6 +17,7 @@ final class DictionaryRouter {
     private var navigationManager: NavigationProtocol
 
     // MARK: - init
+    
     init(navigationManager: NavigationProtocol) {
         self.navigationManager = navigationManager
     }

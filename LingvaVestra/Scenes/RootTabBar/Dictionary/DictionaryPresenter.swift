@@ -19,6 +19,7 @@ final class DictionaryPresenter {
     private var router: DictionaryRouterProtocol
 
     // MARK: - init
+    
     init(view: DictionaryViewProtocol?, router: DictionaryRouterProtocol) {
         self.view = view
         self.router = router

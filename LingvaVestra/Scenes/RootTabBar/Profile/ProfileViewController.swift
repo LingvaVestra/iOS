@@ -19,6 +19,7 @@ protocol ProfileViewProtocol: BaseViewProtocol {
 }
 
 final class ProfileViewController: BaseViewController {
+
     // MARK: - Properties
 
     var presenter: ProfilePresenterProtocol!
@@ -42,6 +43,7 @@ final class ProfileViewController: BaseViewController {
     }
 
     // MARK: - Actions
+
     @objc
     private func logoutDidTap() {
         presenter.logoutDidTap()
