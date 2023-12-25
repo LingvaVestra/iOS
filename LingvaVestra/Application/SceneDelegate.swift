@@ -20,7 +20,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         navigationManager.setWindow(window)
 
-        // change later: checking if authorized and set the root
-        navigationManager.navigate(.tabBar)
+        if KeychainManager.shared.isAuthorized {
+            NavigationManager.shared.navigate(.tabBar)
+        } else {
+            NavigationManager.shared.navigate(.auth)
+        }
     }
 }

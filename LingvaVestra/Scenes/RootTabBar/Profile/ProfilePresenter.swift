@@ -37,6 +37,7 @@ extension ProfilePresenter: ProfilePresenterProtocol {
 
     /// Called when the logout button is tapped.
     func logoutDidTap() {
+        KeychainManager.shared.removeAllData()
         router.routToAuth()
     }
 }
