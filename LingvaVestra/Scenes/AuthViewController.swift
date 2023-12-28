@@ -24,6 +24,7 @@ final class AuthViewController: BaseViewController {
         textField.autocapitalizationType = .none
         textField.borderStyle = .roundedRect
         textField.delegate = self
+
         return textField
     }()
     
@@ -34,6 +35,7 @@ final class AuthViewController: BaseViewController {
         textField.autocorrectionType = .no
         textField.borderStyle = .roundedRect
         textField.delegate = self
+
         return textField
     }()
     
@@ -52,6 +54,7 @@ final class AuthViewController: BaseViewController {
         let stackView = UIStackView()
         stackView.spacing = Constants.verticalStackSpacing
         stackView.axis = .vertical
+        
         return stackView
     }()
     
