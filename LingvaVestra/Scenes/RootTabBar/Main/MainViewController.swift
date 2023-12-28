@@ -21,7 +21,7 @@ protocol MainViewProtocol: BaseViewProtocol {
 }
 
 final class MainViewController: BaseViewController {
-
+    
     // MARK: - Properties
     
     var presenter: MainPresenterProtocol!
@@ -57,13 +57,11 @@ final class MainViewController: BaseViewController {
 extension MainViewController {
     
     override func embedSubviews() {
-        super.embedSubviews()
         
         view.addSubview(logoutButton)
     }
     
     override func setupConstraints() {
-        super.setupConstraints()
         
         logoutButton.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.topPadding)

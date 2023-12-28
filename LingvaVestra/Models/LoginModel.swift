@@ -4,18 +4,18 @@
 //
 
 import Foundation
+import Alamofire
 
 // MARK: - LoginRequest
 
-struct LoginRequest: Encodable {
-
+struct LoginRequest: RequestProtocol {
+    let url = "auth/login"
+    let method: Alamofire.HTTPMethod = .post
     let username: String
     let password: String
-
-        enum CodingKeys: String, CodingKey {
-            case username
-            case password
-        }
+    var params: [String: Any]? {
+        ["password": password, "username": username]
+    }
 }
 
 // MARK: - LoginResponse

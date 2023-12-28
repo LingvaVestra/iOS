@@ -6,32 +6,25 @@
 import Foundation
 import Alamofire
 
+protocol AuthServiceProtocol {
+    /// Logs in a user using the provided credentials.
+    func login(username: String, password: String, completion: @escaping (AFResult<LoginModel>) -> Void)
+}
+
 final class AuthService {
     
-    // MARK: - login
+    // MARK: - Dependensies
     
+    private let netwokManager: NetworkManagerProtocol = NetworkManager.shared
+}
+
+// MARK: - AuthServiceProtocol
+
+extension AuthService: AuthServiceProtocol {
     func login(username: String, password: String, completion: @escaping (AFResult<LoginModel>) -> Void) {
-        let endpoint: EndpointProtocol = Endpoint.login(username: username, password: password)
-
-        guard let url = URL(string: endpoint.baseURL)?.appendingPathComponent(endpoint.url) else {
-            completion(.error(NetworkError(.invalidURL)))
-            return
-        }
-
-        AF.request(url, method: endpoint.method, parameters: endpoint.params)
-            .validate()
         
-            .responseDecodable(of: LoginModel.self) { response in
-                switch response.result {
-                case .success(let answer):
-                    // print to see result - change later
-                    print(answer)
-                    completion(.success(answer))
-                case .failure(let afError):
-                    // print to see result - change later
-                    print(afError)
-                    completion(.error(NetworkError(.login)))
-                }
-            }
+        let request: RequestProtocol = LoginRequest(username: username, password: password)
+        
+        netwokManager.makeRequest(request: request, error: .login, completion: completion)
     }
 }

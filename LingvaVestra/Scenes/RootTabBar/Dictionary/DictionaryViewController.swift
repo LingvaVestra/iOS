@@ -21,27 +21,27 @@ protocol DictionaryViewProtocol: BaseViewProtocol {
 final class DictionaryViewController: BaseViewController {
     
     // MARK: - Properties
-
+    
     var presenter: DictionaryPresenterProtocol!
-
+    
     private lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.setTitle("Logout", for: .normal)
         button.layer.cornerRadius = Constants.logoutCornerRadius
         button.backgroundColor = .gray
         button.addTarget(self, action: #selector(logoutDidTap), for: .touchUpInside)
-
+        
         return button
     }()
-
+    
     // MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         presenter.viewDidLoad()
     }
-
+    
     // MARK: - Actions
     
     @objc
@@ -53,22 +53,20 @@ final class DictionaryViewController: BaseViewController {
 // MARK: - Setup Subviews
 
 extension DictionaryViewController {
-
+    
     override func setupSubviews() {
         super.setupSubviews()
-
+        
         view.backgroundColor = .secondarySystemBackground
     }
-
+    
     override func embedSubviews() {
-        super.embedSubviews()
-
+        
         view.addSubview(logoutButton)
     }
-
+    
     override func setupConstraints() {
-        super.setupConstraints()
-
+        
         logoutButton.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.topPadding)
             $0.centerX.equalToSuperview()

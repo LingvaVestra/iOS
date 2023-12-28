@@ -6,19 +6,21 @@
 import Foundation
 
 final class NetworkError: NSObject, Error {
-
+    
     // MARK: - Properties
-
+    
     var type: TypeError
     var message: String?
-
+    
     // MARK: - init
-
+    
     init(_ type: TypeError, message: String? = nil) {
         self.type = type
         self.message = message
     }
 }
+
+// TODO: add SwiftGen
 
 enum TypeError: String, Error {
     case notConnectedToInternet = "No Internet connection"
