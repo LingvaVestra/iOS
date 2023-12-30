@@ -6,6 +6,13 @@
 import Foundation
 import Alamofire
 
+// MARK: - LoginEncodable
+
+struct LoginEncodable: Encodable {
+    let username: String
+    let password: String
+}
+
 // MARK: - LoginRequest
 
 struct LoginRequest: RequestProtocol {
@@ -14,7 +21,7 @@ struct LoginRequest: RequestProtocol {
     let username: String
     let password: String
     var params: [String: Any]? {
-        ["password": password, "username": username]
+        LoginEncodable(username: username, password: password).toJSON()
     }
 }
 

@@ -123,6 +123,7 @@
 				A06B184C2B35781A00F3FC0B /* Application */,
 				A06B18652B35C2C800F3FC0B /* Models */,
 				A06B18492B3576F900F3FC0B /* Scenes */,
+				A0E0271C2B4059DA00F44F2B /* Services */,
 				A06B18472B3576C800F3FC0B /* Managers */,
 				A06B18482B3576DD00F3FC0B /* Common */,
 				A0A6A6DE2B3991160091C4D7 /* Extensions */,
@@ -233,7 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				A06893FE2B3D55E3000FA577 /* NetworkManager.swift */,
-				A0A6A6D92B3973810091C4D7 /* AuthService.swift */,
 				A06B184E2B357BE800F3FC0B /* RequestProtocol.swift */,
 				A06B185B2B35A85400F3FC0B /* NetworkError.swift */,
 				A0A6A6E12B39950B0091C4D7 /* AFResult.swift */,
@@ -286,6 +286,14 @@
 				A06894022B3D7786000FA577 /* UIStackView+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0E0271C2B4059DA00F44F2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A0A6A6D92B3973810091C4D7 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

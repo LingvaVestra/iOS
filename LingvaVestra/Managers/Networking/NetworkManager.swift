@@ -16,11 +16,11 @@ protocol NetworkManagerProtocol {
 }
 
 final class NetworkManager: NetworkManagerProtocol {
-    
+
     static let shared = NetworkManager()
-    
+
     private init() {}
-    
+
     func makeRequest<T: Decodable>(
         request: RequestProtocol,
         error: TypeError,
@@ -30,7 +30,7 @@ final class NetworkManager: NetworkManagerProtocol {
             completion(.error(NetworkError(.invalidURL)))
             return
         }
-        
+
         AF.request(url, method: request.method, parameters: request.params)
             .validate()
             .responseDecodable(of: T.self) { response in
@@ -38,12 +38,11 @@ final class NetworkManager: NetworkManagerProtocol {
                 case .success(let answer):
                     completion(.success(answer))
                 case .failure:
-                    
+
                     // TODO: add Alamofire error handling
-                    
+
                     completion(.error(NetworkError(error)))
                 }
             }
     }
-    
 }
