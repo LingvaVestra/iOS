@@ -19,31 +19,31 @@ protocol ProfileViewProtocol: BaseViewProtocol {
 }
 
 final class ProfileViewController: BaseViewController {
-
+    
     // MARK: - Properties
-
+    
     var presenter: ProfilePresenterProtocol!
-
+    
     private lazy var logoutButton: UIButton = {
         let button = UIButton()
         button.setTitle("Logout", for: .normal)
         button.layer.cornerRadius = Constants.logoutCornerRadius
         button.backgroundColor = .gray
         button.addTarget(self, action: #selector(logoutDidTap), for: .touchUpInside)
-
+        
         return button
     }()
-
+    
     // MARK: - Life cycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         presenter.viewDidLoad()
     }
-
+    
     // MARK: - Actions
-
+    
     @objc
     private func logoutDidTap() {
         presenter.logoutDidTap()
@@ -53,22 +53,20 @@ final class ProfileViewController: BaseViewController {
 // MARK: - Setup Subviews
 
 extension ProfileViewController {
-
+    
     override func setupSubviews() {
         super.setupSubviews()
-
+        
         view.backgroundColor = .systemGray4
     }
-
+    
     override func embedSubviews() {
-        super.embedSubviews()
-
+        
         view.addSubview(logoutButton)
     }
-
+    
     override func setupConstraints() {
-        super.setupConstraints()
-
+        
         logoutButton.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(Constants.topPadding)
             $0.centerX.equalToSuperview()
