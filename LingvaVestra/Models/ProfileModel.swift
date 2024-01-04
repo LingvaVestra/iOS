@@ -12,4 +12,5 @@ struct ProfileModel: Decodable {
     let email: String
     let phone: String
     let name: String
+    let urlPhoto: String
 }
