@@ -16,13 +16,15 @@ final class UserPhotoView: BaseView {
     
     // MARK: - Properties
     
-    private lazy var photoImageView: UIImageView = {
+    private var photoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: "person"))
         imageView.contentMode = .scaleToFill
         imageView.backgroundColor = .systemBackground
         imageView.tintColor = .secondarySystemBackground
         imageView.clipsToBounds = true
-        
+        imageView.layer.cornerRadius = Constants.imageViewSize / 2.0
+        imageView.layer.masksToBounds = true
+
         return imageView
     }()
 }
@@ -41,24 +43,19 @@ extension UserPhotoView {
 // MARK: - Setup subviews
 
 extension UserPhotoView {
-    
+
     override func embedSubviews() {
-        addSubview(photoImageView)
+        addSubviews(photoImageView)
     }
-    
-    override func setConstraints() {
+
+    override func setupConstraints() {
         self.snp.makeConstraints {
             $0.height.equalTo(Constants.superviewHeight)
         }
-        
+
         photoImageView.snp.makeConstraints {
             $0.size.equalTo(Constants.imageViewSize)
             $0.centerX.equalToSuperview()
         }
-    }
-    
-    override func updateSubviews() {
-        photoImageView.layer.cornerRadius = photoImageView.bounds.height / 2.0
-        photoImageView.layer.masksToBounds = true
     }
 }

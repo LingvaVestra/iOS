@@ -18,11 +18,7 @@ struct LoginEncodable: Encodable {
 struct LoginRequest: RequestProtocol {
     let url = "auth/login"
     let method: Alamofire.HTTPMethod = .post
-    let username: String
-    let password: String
-    var params: [String: Any]? {
-        LoginEncodable(username: username, password: password).toJSON()
-    }
+    var params: [String: Any]?
 }
 
 // MARK: - LoginResponse

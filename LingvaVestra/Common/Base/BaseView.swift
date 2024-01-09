@@ -38,7 +38,7 @@ class BaseView: UIView {
     /// Sets up the view's subviews and their constraints.
     func setupSubviews() {
         embedSubviews()
-        setConstraints()
+        setupConstraints()
     }
 
     /// Updates the view's subviews after layout updates.
@@ -48,7 +48,7 @@ class BaseView: UIView {
     func embedSubviews() {}
 
     /// Sets up constraints for subviews.
-    func setConstraints() {}
+    func setupConstraints() {}
 
     /// Updates constraints for subviews after layout updates.
     func updateSubviewsConstraints() {}

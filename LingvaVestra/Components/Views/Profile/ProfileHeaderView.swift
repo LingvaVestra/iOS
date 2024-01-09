@@ -3,26 +3,21 @@
 //  LingvaVestra
 //
 
-import Foundation
 import UIKit
 import SnapKit
 
 private enum Constants {
     static let verticalStackSpacing: CGFloat = 10.0
-    static let nameLabelFontSize: CGFloat = 16
+    static let nameLabelFontSize: CGFloat = 16.0
 }
 
 final class ProfileHeaderView: BaseView {
 
     // MARK: - Properties
 
-    let userPhotoView: UserPhotoView = {
-        let photoView = UserPhotoView()
+    private let userPhotoView = UserPhotoView()
 
-        return photoView
-    }()
-
-    let userNameLabel: UILabel = {
+    private let userNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "John"
@@ -31,7 +26,7 @@ final class ProfileHeaderView: BaseView {
         return label
     }()
 
-    let userEmailLabel: UILabel = {
+    private let userEmailLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.text = "sample@sample.com"
@@ -40,7 +35,7 @@ final class ProfileHeaderView: BaseView {
         return label
     }()
 
-    let verticalStack: UIStackView = {
+    private let verticalStack: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = Constants.verticalStackSpacing
@@ -75,7 +70,7 @@ extension ProfileHeaderView {
         addSubviews(verticalStack)
     }
 
-    override func setConstraints() {
+    override func setupConstraints() {
         verticalStack.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
