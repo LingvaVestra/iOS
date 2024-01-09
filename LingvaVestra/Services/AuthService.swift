@@ -30,8 +30,9 @@ extension AuthService: AuthServiceProtocol {
     /// Logs in a user using the provided credentials.
     func login(username: String, password: String, completion: @escaping (AFResult<LoginModel>) -> Void) {
         
-        let request: RequestProtocol = LoginRequest(username: username, password: password)
-        
+        let parameters = LoginEncodable(username: username, password: password).toJSON()
+        let request: RequestProtocol = LoginRequest(params: parameters)
+
         netwokManager.makeRequest(request: request, error: .login, completion: completion)
     }
 }
