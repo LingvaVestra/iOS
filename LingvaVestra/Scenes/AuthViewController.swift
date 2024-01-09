@@ -41,9 +41,9 @@ final class AuthViewController: BaseViewController {
 
     private lazy var loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Login", for: .normal)
+        button.setTitle(Strings.login, for: .normal)
         button.layer.cornerRadius = Constants.loginButtonCornerRadius
-        button.backgroundColor = .gray
+        button.backgroundColor = Asset.Colors.orange.color
 
         button.addTarget(self, action: #selector(loginDidTap), for: .touchUpInside)
 
