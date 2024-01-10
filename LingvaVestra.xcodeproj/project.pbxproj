@@ -11,6 +11,10 @@
 		747CC1732B1FA3A50017DBA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747CC1722B1FA3A50017DBA0 /* SceneDelegate.swift */; };
 		747CC17A2B1FA3A60017DBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747CC1792B1FA3A60017DBA0 /* Assets.xcassets */; };
 		747CC17D2B1FA3A60017DBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 747CC17B2B1FA3A60017DBA0 /* LaunchScreen.storyboard */; };
+		74A823A02B4DD97E0077935D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74A8239F2B4DD97E0077935D /* Colors.xcassets */; };
+		74A823A42B4DE2A10077935D /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A823A32B4DE2A10077935D /* XCAssets+Generated.swift */; };
+		74BF4AE62B4C32FB009BBD9B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74BF4AE52B4C32FB009BBD9B /* Localizable.strings */; };
+		74BF4AE82B4C3397009BBD9B /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BF4AE72B4C3397009BBD9B /* Strings+Generated.swift */; };
 		A0059D232B205AA4001C3CE5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0059D222B205AA4001C3CE5 /* SnapKit */; };
 		A0059D252B205AA4001C3CE5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A0059D242B205AA4001C3CE5 /* SnapKit-Dynamic */; };
 		A0451E092B3301F400DBAD47 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */; };
@@ -58,6 +62,10 @@
 		747CC1792B1FA3A60017DBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		747CC17C2B1FA3A60017DBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		747CC17E2B1FA3A60017DBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74A8239F2B4DD97E0077935D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		74A823A32B4DE2A10077935D /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		74BF4AE52B4C32FB009BBD9B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		74BF4AE72B4C3397009BBD9B /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		A0451E0A2B33020200DBAD47 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
 		A0451E0C2B33020E00DBAD47 /* DictionaryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembler.swift; sourceTree = "<group>"; };
@@ -138,8 +146,18 @@
 				A0A6A6DE2B3991160091C4D7 /* Extensions */,
 				A06B184B2B35780C00F3FC0B /* Storyboards */,
 				A06B184A2B35777E00F3FC0B /* Resources */,
+				74BF4AEA2B4C4A51009BBD9B /* SwiftGen */,
 			);
 			path = LingvaVestra;
+			sourceTree = "<group>";
+		};
+		74BF4AEA2B4C4A51009BBD9B /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				74BF4AE72B4C3397009BBD9B /* Strings+Generated.swift */,
+				74A823A32B4DE2A10077935D /* XCAssets+Generated.swift */,
+			);
+			path = SwiftGen;
 			sourceTree = "<group>";
 		};
 		A0451E062B33019A00DBAD47 /* Dictionary */ = {
@@ -243,6 +261,8 @@
 			isa = PBXGroup;
 			children = (
 				747CC1792B1FA3A60017DBA0 /* Assets.xcassets */,
+				74A8239F2B4DD97E0077935D /* Colors.xcassets */,
+				74BF4AE52B4C32FB009BBD9B /* Localizable.strings */,
 				747CC17E2B1FA3A60017DBA0 /* Info.plist */,
 			);
 			path = Resources;
@@ -338,6 +358,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 747CC1812B1FA3A60017DBA0 /* Build configuration list for PBXNativeTarget "LingvaVestra" */;
 			buildPhases = (
+				74BF4AE92B4C3842009BBD9B /* SwiftGen */,
 				A0634B332B209715006A4605 /* Swiftlint */,
 				747CC1692B1FA3A50017DBA0 /* Sources */,
 				747CC16A2B1FA3A50017DBA0 /* Frameworks */,
@@ -402,6 +423,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				747CC17D2B1FA3A60017DBA0 /* LaunchScreen.storyboard in Resources */,
+				74A823A02B4DD97E0077935D /* Colors.xcassets in Resources */,
+				74BF4AE62B4C32FB009BBD9B /* Localizable.strings in Resources */,
 				747CC17A2B1FA3A60017DBA0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +432,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		74BF4AE92B4C3842009BBD9B /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH \n\nif which swiftgen >/dev/null; then\n    swiftgen\nelse\n    echo \"error: SwiftGen not installed, run 'brew install swiftgen' or install via CocoaPods/Swift Package Manager\"\n    exit 1\nfi\n";
+		};
 		A0634B332B209715006A4605 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -440,6 +482,7 @@
 				A0A572AF2B245844000452DF /* BaseTabBarController.swift in Sources */,
 				A0451E0B2B33020200DBAD47 /* DictionaryPresenter.swift in Sources */,
 				A0A6A6E02B39912D0091C4D7 /* Encodable+extension.swift in Sources */,
+				74A823A42B4DE2A10077935D /* XCAssets+Generated.swift in Sources */,
 				A06B186D2B35C4A900F3FC0B /* LogoutModel.swift in Sources */,
 				A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */,
 				A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */,
@@ -464,6 +507,7 @@
 				A0451E0D2B33020E00DBAD47 /* DictionaryAssembler.swift in Sources */,
 				A06B185C2B35A85400F3FC0B /* NetworkError.swift in Sources */,
 				A0A572B82B24676C000452DF /* BaseViewProtocol.swift in Sources */,
+				74BF4AE82B4C3397009BBD9B /* Strings+Generated.swift in Sources */,
 				A06B18672B35C2D900F3FC0B /* LoginModel.swift in Sources */,
 				A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */,
 				A05074F12B46DEFD00BDF6F0 /* ProfileHeaderView.swift in Sources */,
@@ -540,7 +584,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -597,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -622,6 +666,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -650,6 +695,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
