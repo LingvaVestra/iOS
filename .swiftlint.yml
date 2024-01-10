@@ -2,6 +2,7 @@
 excluded:
   - Carthage
   - Pods
+  - LingvaVestra/SwiftGen
 
 disabled_rules:
   - trailing_whitespace
