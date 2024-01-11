@@ -14,11 +14,11 @@ enum SettingsItem {
     var title: String {
         switch self {
         case .rateApp:
-            return .Settings.rateApp
+            return Strings.Profile.Settings.rateApp
         case .logout:
-            return .Settings.logout
+            return Strings.Profile.Settings.logout
         case .deleteProfile:
-            return .Settings.deleteProfile
+            return Strings.Profile.Settings.deleteProfile
         }
     }
 
@@ -31,13 +31,5 @@ enum SettingsItem {
         case .deleteProfile:
             return .red
         }
-    }
-}
-
-extension String {
-    enum Settings {
-        static let rateApp = "Rate app"
-        static let logout = "Exit"
-        static let deleteProfile = "Delete profile"
     }
 }

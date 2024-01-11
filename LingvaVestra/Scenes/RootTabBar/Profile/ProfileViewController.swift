@@ -9,6 +9,7 @@ import SnapKit
 private enum Constants {
     static let padding: CGFloat = 20.0
     static let tableViewRowHeight = 70.0
+    static let versionPadding: CGFloat = 40.0
 }
 
 protocol ProfileViewProtocol: BaseViewProtocol {
@@ -35,6 +36,14 @@ final class ProfileViewController: BaseViewController {
         return tableView
     }()
 
+    private let versionLabel: UILabel = {
+        let label = UILabel()
+        label.text = Strings.Profile.version
+        label.textColor = .lightGray
+        label.textAlignment = .center
+        return label
+    }()
+
     // MARK: - Life cycle
     
     override func viewDidLoad() {
@@ -58,7 +67,8 @@ extension ProfileViewController {
         
         view.addSubviews(
             profileHeaderView,
-            settingsTableView
+            settingsTableView,
+            versionLabel
         )
     }
 
@@ -72,7 +82,12 @@ extension ProfileViewController {
         settingsTableView.snp.makeConstraints {
             $0.top.equalTo(profileHeaderView.snp.bottom).offset(Constants.padding)
             $0.leading.trailing.equalToSuperview().inset(Constants.padding)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide)
+            $0.bottom.equalTo(versionLabel.snp.top).inset(Constants.padding)
+        }
+
+        versionLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(Constants.versionPadding)
         }
     }
 }
