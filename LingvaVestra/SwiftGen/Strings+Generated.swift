@@ -10,15 +10,25 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Strings {
-  /// Login
-  internal static let login = Strings.tr("Localizable", "login", fallback: "Login")
-  /// Localizable.strings
-  ///   LingvaVestra
-  /// 
-  ///   Created by Егор on 08.01.2024.
-  internal static let test = Strings.tr("Localizable", "test", fallback: "titletest22")
-  /// titletest33
-  internal static let test3 = Strings.tr("Localizable", "test3", fallback: "titletest33")
+  internal enum Login {
+    /// Localizable.strings
+    ///   LingvaVestra
+    /// 
+    ///   Created by Егор on 08.01.2024.
+    internal static let loginButtonTitle = Strings.tr("Localizable", "Login.loginButtonTitle", fallback: "Login")
+  }
+  internal enum Profile {
+    /// v. 1.1
+    internal static let version = Strings.tr("Localizable", "Profile.version", fallback: "v. 1.1")
+    internal enum Settings {
+      /// Delete Profile
+      internal static let deleteProfile = Strings.tr("Localizable", "Profile.Settings.deleteProfile", fallback: "Delete Profile")
+      /// Exit
+      internal static let logout = Strings.tr("Localizable", "Profile.Settings.logout", fallback: "Exit")
+      /// Rate App
+      internal static let rateApp = Strings.tr("Localizable", "Profile.Settings.rateApp", fallback: "Rate App")
+    }
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

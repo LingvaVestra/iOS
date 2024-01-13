@@ -19,7 +19,7 @@ final class UserPhotoView: BaseView {
     private var photoImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(systemName: "person"))
         imageView.contentMode = .scaleToFill
-        imageView.backgroundColor = .systemBackground
+        imageView.backgroundColor = .lightGray
         imageView.tintColor = .secondarySystemBackground
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = Constants.imageViewSize / 2.0
