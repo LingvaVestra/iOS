@@ -41,7 +41,7 @@ final class AuthViewController: BaseViewController {
 
     private lazy var loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle(Strings.login, for: .normal)
+        button.setTitle(Strings.Login.loginButtonTitle, for: .normal)
         button.layer.cornerRadius = Constants.loginButtonCornerRadius
         button.backgroundColor = Asset.Colors.orange.color
 
