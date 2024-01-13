@@ -14,19 +14,21 @@ private enum Constants {
     static let backgroundInset: CGFloat = 10.0
 }
 
-class SettingsTableViewCell: BaseTableViewCell {
+final class SettingsTableViewCell: BaseTableViewCell {
 
     // MARK: - Properties
 
     private let disclosureImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = .badge
+
         return imageView
     }()
 
     private let settingsLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
+
         return label
     }()
 
@@ -36,6 +38,7 @@ class SettingsTableViewCell: BaseTableViewCell {
         view.layer.borderWidth = Constants.backgroundBorderWidth
         view.layer.cornerRadius = Constants.backgroundCornerRadius
         view.layer.borderColor = UIColor.lightGray.cgColor
+        
         return view
     }()
 }

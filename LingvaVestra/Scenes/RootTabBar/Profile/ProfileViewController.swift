@@ -33,14 +33,16 @@ final class ProfileViewController: BaseViewController {
         tableView.isScrollEnabled = false
         tableView.separatorColor = .clear
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.reuseIdentifier)
+
         return tableView
     }()
 
     private let versionLabel: UILabel = {
         let label = UILabel()
-        label.text = Strings.Profile.version
+        label.text = VersionProvider.version
         label.textColor = .lightGray
         label.textAlignment = .center
+        
         return label
     }()
 
@@ -117,10 +119,7 @@ extension ProfileViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable:next line_length
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.reuseIdentifier) as? SettingsTableViewCell else {
-            fatalError("Unable to dequeue the cell")
-        }
+        let cell: SettingsTableViewCell = tableView.dequeueReusableCell(for: indexPath)
         let currentItem = presenter.items[indexPath.row]
         cell.configure(item: currentItem)
 

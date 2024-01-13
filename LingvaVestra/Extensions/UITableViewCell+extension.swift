@@ -3,11 +3,6 @@
 //  LingvaVestra
 //
 
-//
-//  UITableViewCell+extension.swift
-//  LingvaVestra
-//
-
 import UIKit
 
 extension UITableViewCell: TypeDescribable {

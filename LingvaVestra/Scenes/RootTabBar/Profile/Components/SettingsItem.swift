@@ -3,7 +3,6 @@
 //  LingvaVestra
 //
 
-import Foundation
 import UIKit
 
 enum SettingsItem {

@@ -51,13 +51,13 @@ extension ProfilePresenter: ProfilePresenterProtocol {
     func didSelectSettingsRow(item: SettingsItem) {
         switch item {
         case .rateApp:
-            // Add logic when Design & Backend will be ready
+            // TODO: Add logic when Design & Backend will be ready
             return
         case .logout:
             KeychainManager.shared.removeAllData()
             router.routToAuth()
         case .deleteProfile:
-            // Add logic when Design & Backend will be ready
+            // TODO: Add logic when Design & Backend will be ready
             return
         }
     }

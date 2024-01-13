@@ -12,7 +12,7 @@ public protocol TypeDescribable {
 }
 
 public extension TypeDescribable {
-  static var typeName: String {
-    String(describing: self)
-  }
+    static var typeName: String {
+        String(describing: self)
+    }
 }

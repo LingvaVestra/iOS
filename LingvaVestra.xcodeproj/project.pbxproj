@@ -17,6 +17,8 @@
 		74BF4AE82B4C3397009BBD9B /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BF4AE72B4C3397009BBD9B /* Strings+Generated.swift */; };
 		A0059D232B205AA4001C3CE5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A0059D222B205AA4001C3CE5 /* SnapKit */; };
 		A0059D252B205AA4001C3CE5 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A0059D242B205AA4001C3CE5 /* SnapKit-Dynamic */; };
+		A01656B82B52722800B7211E /* VersionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01656B72B52722800B7211E /* VersionProvider.swift */; };
+		A01656BA2B5274BE00B7211E /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01656B92B5274BE00B7211E /* UITableView+extension.swift */; };
 		A0451E092B3301F400DBAD47 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */; };
 		A0451E0B2B33020200DBAD47 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E0A2B33020200DBAD47 /* DictionaryPresenter.swift */; };
 		A0451E0D2B33020E00DBAD47 /* DictionaryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0451E0C2B33020E00DBAD47 /* DictionaryAssembler.swift */; };
@@ -71,6 +73,8 @@
 		74A823A32B4DE2A10077935D /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		74BF4AE52B4C32FB009BBD9B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		74BF4AE72B4C3397009BBD9B /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		A01656B72B52722800B7211E /* VersionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionProvider.swift; sourceTree = "<group>"; };
+		A01656B92B5274BE00B7211E /* UITableView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		A0451E082B3301F400DBAD47 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		A0451E0A2B33020200DBAD47 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
 		A0451E0C2B33020E00DBAD47 /* DictionaryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembler.swift; sourceTree = "<group>"; };
@@ -170,6 +174,15 @@
 			path = SwiftGen;
 			sourceTree = "<group>";
 		};
+		A01656B62B526F2E00B7211E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A05687822B4F01DB00811DAC /* SettingsTableViewCell.swift */,
+				A05687842B4F01E600811DAC /* SettingsItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A0451E062B33019A00DBAD47 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 		A0451E072B3301A600DBAD47 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A01656B62B526F2E00B7211E /* Components */,
 				A0451E102B3303CA00DBAD47 /* ProfileViewController.swift */,
 				A0451E122B3303D500DBAD47 /* ProfilePresenter.swift */,
 				A0451E162B3303E700DBAD47 /* ProfileRouter.swift */,
@@ -208,7 +222,6 @@
 		A05074E62B46D3F200BDF6F0 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A05687802B4F01AA00811DAC /* TableViewComponents */,
 				A05074E72B46D42600BDF6F0 /* Views */,
 			);
 			path = Components;
@@ -227,23 +240,6 @@
 			children = (
 				A05074E92B46D4DD00BDF6F0 /* UserPhotoView.swift */,
 				A05074F02B46DEFD00BDF6F0 /* ProfileHeaderView.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		A05687802B4F01AA00811DAC /* TableViewComponents */ = {
-			isa = PBXGroup;
-			children = (
-				A05687812B4F01C000811DAC /* Profile */,
-			);
-			path = TableViewComponents;
-			sourceTree = "<group>";
-		};
-		A05687812B4F01C000811DAC /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				A05687822B4F01DB00811DAC /* SettingsTableViewCell.swift */,
-				A05687842B4F01E600811DAC /* SettingsItem.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -370,6 +366,7 @@
 				A06894002B3D774D000FA577 /* UIView+extension.swift */,
 				A06894022B3D7786000FA577 /* UIStackView+extension.swift */,
 				A056878A2B4F02CF00811DAC /* UITableViewCell+extension.swift */,
+				A01656B92B5274BE00B7211E /* UITableView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -378,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				A0A6A6D92B3973810091C4D7 /* AuthService.swift */,
+				A01656B72B52722800B7211E /* VersionProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -535,6 +533,7 @@
 				747CC1732B1FA3A50017DBA0 /* SceneDelegate.swift in Sources */,
 				A054D5BF2B22FB2300BC30B3 /* NavigationManager.swift in Sources */,
 				A0A572BA2B2467BD000452DF /* BasePresenterProtocol.swift in Sources */,
+				A01656BA2B5274BE00B7211E /* UITableView+extension.swift in Sources */,
 				A05687892B4F027A00811DAC /* TypeDescribable.swift in Sources */,
 				A0A572B22B245B4F000452DF /* MainViewController.swift in Sources */,
 				A0451E0D2B33020E00DBAD47 /* DictionaryAssembler.swift in Sources */,
@@ -545,6 +544,7 @@
 				A05687872B4F023B00811DAC /* BaseTableViewCell.swift in Sources */,
 				A06B18672B35C2D900F3FC0B /* LoginModel.swift in Sources */,
 				A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */,
+				A01656B82B52722800B7211E /* VersionProvider.swift in Sources */,
 				A05074F12B46DEFD00BDF6F0 /* ProfileHeaderView.swift in Sources */,
 				A0451E132B3303D500DBAD47 /* ProfilePresenter.swift in Sources */,
 				A05074EC2B46D5EB00BDF6F0 /* BaseView.swift in Sources */,
