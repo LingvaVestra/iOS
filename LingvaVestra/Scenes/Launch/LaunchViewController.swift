@@ -10,6 +10,7 @@ import SnapKit
 private enum Constants {
     static let animationSpeed: CGFloat = 1.0
     static let animationTime: TimeInterval = 3.0
+    static let animationName = "LaunchAnimation"
 }
 
 final class LaunchViewController: BaseViewController {
@@ -20,7 +21,7 @@ final class LaunchViewController: BaseViewController {
     var loadedLaunchHandler: ((Bool) -> Void)?
 
     private var animationView: LottieAnimationView = {
-        let animationView: LottieAnimationView = .init(name: "LaunchAnimation")
+        let animationView: LottieAnimationView = .init(name: Constants.animationName)
         animationView.backgroundColor = .launchBackground
         animationView.contentMode = .scaleAspectFit
         animationView.loopMode = .loop
@@ -75,6 +76,8 @@ extension LaunchViewController {
             timeInterval: Constants.animationTime,
             target: self,
             selector: #selector(finishModule),
-            userInfo: nil, repeats: false)
+            userInfo: nil, 
+            repeats: false
+        )
     }
 }
