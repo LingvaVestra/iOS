@@ -40,11 +40,7 @@ extension ProfilePresenter: ProfilePresenterProtocol {
     
     /// Array containing the settings items displayed in the settingsTableView.
     var items: [SettingsItem] {
-        [
-            .rateApp,
-            .logout,
-            .deleteProfile
-        ]
+        SettingsItem.allCases
     }
     
     /// Called when the settingsTableView row is tapped.

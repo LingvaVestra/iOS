@@ -5,6 +5,10 @@
 
 import Foundation
 
+private enum Constants {
+  static let versionKey = "CFBundleShortVersionString"
+}
+
 enum VersionProvider {
 
   static var version: String = {
@@ -18,8 +22,4 @@ enum VersionProvider {
 
     return versionText
   }()
-
-  private enum Constants {
-    static let versionKey = "CFBundleShortVersionString"
-  }
 }

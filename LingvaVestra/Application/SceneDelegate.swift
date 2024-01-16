@@ -11,19 +11,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     private let navigationManager: NavigationProtocol = NavigationManager.shared
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: scene)
         
-        navigationManager.setWindow(window)
-
-        if KeychainManager.shared.isAuthorized {
-            NavigationManager.shared.navigate(.tabBar)
-        } else {
-            NavigationManager.shared.navigate(.auth)
+        navigationManager.setWindow(window) { [weak self] _ in
+            self?.navigationManager.navigate(.tabBar)
         }
     }
 }

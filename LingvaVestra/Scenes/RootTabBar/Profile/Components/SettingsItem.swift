@@ -5,7 +5,7 @@
 
 import UIKit
 
-enum SettingsItem {
+enum SettingsItem: CaseIterable {
     case rateApp
     case logout
     case deleteProfile

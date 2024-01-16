@@ -14,7 +14,11 @@ enum Route {
 
 protocol NavigationProtocol {
     /// Sets the main window for the app.
-    func setWindow(_ window: UIWindow?)
+    ///
+    /// - Parameters:
+    ///   - window: The main window to be set for the app.
+    ///   - completionHandler: A closure that is called after the window is set.
+    func setWindow(_ window: UIWindow?, completionHandler: @escaping (Bool) -> Void)
 
     /// Navigates to a specific route
     func navigate(_ route: Route)
@@ -37,8 +41,15 @@ final class NavigationManager {
 
 extension NavigationManager: NavigationProtocol {
     /// Sets the main window for the app.
-    func setWindow(_ window: UIWindow?) {
+    ///
+    /// - Parameters:
+    ///   - window: The main window to be set for the app.
+    ///   - completionHandler: A closure that is called after the window is set.
+    func setWindow(_ window: UIWindow?, completionHandler: @escaping (Bool) -> Void) {
         self.window = window
+        let launchController = LaunchViewController()
+        launchController.loadedLaunchHandler = completionHandler
+        self.setRootController(launchController)
     }
 
     /// Navigates to the specified route.
