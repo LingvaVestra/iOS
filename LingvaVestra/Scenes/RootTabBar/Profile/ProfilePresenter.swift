@@ -49,6 +49,8 @@ extension ProfilePresenter: ProfilePresenterProtocol {
         case .rateApp:
             // TODO: Add logic when Design & Backend will be ready
             return
+        case .feedback:
+            router.routToFeedback()
         case .logout:
             KeychainManager.shared.removeAllData()
             router.routToAuth()

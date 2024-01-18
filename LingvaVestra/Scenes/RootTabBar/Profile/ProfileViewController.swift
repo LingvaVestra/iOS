@@ -13,8 +13,12 @@ private enum Constants {
 }
 
 protocol ProfileViewProtocol: BaseViewProtocol {
+
     /// Notifies that new data has been received.
     func didReceiveData()
+
+    /// Navigates to ViewController
+    func pushViewController(_ viewController: UIViewController, animated: Bool)
 }
 
 final class ProfileViewController: BaseViewController {
@@ -22,7 +26,7 @@ final class ProfileViewController: BaseViewController {
     // MARK: - Properties
     
     var presenter: ProfilePresenterProtocol!
-    
+
     private var profileHeaderView = ProfileHeaderView()
 
     private lazy var settingsTableView: UITableView = {
@@ -97,6 +101,7 @@ extension ProfileViewController {
 // MARK: - View Protocol
 
 extension ProfileViewController: ProfileViewProtocol {
+
     /// Notifies that new data has been received.
     func didReceiveData() {
         // update Interface with data

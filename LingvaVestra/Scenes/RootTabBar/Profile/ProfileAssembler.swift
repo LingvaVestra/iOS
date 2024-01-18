@@ -11,7 +11,7 @@ final class ProfileAssembler {
     func assembly() -> ProfileViewController {
         let view = ProfileViewController()
         let navigationManager = NavigationManager.shared
-        let router = ProfileRouter(navigationManager: navigationManager)
+        let router = ProfileRouter(navigationManager: navigationManager, view: view)
         let presenter = ProfilePresenter(view: view, router: router)
 
         view.presenter = presenter

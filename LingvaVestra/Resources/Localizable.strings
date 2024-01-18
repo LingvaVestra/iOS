@@ -8,6 +8,14 @@
 "Login.loginButtonTitle" = "Login";
 
 "Profile.Settings.rateApp" = "Rate App";
+"Profile.Settings.feedback" = "Feedback";
 "Profile.Settings.logout" = "Exit";
 "Profile.Settings.deleteProfile" = "Delete Profile";
 "Profile.version" = "v. 1.1";
+
+"Profile.Feedback.description" = "Нам важно знать ваше мнение, чтобы сделать приложения лучше. Напишите нам свои пожелания или сообщите о возникших проблемах.";
+"Profile.Feedback.emailDescription" = "Мы ответим вам";
+"Profile.Feedback.sendButtonTitle" = "Отправить";
+"Profile.Feedback.emailTextFieldPlaceholder" = "Почта";
+"Profile.Feedback.textViewPlaceholder" = "Комментарий";
+"Profile.Feedback.title" = "Обратная связь";

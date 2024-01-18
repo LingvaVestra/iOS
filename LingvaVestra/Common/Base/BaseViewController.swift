@@ -51,7 +51,7 @@ extension BaseViewController {
     /// Sets the color of the navigation bar.
     ///
     /// - Parameter color: The color for the navigation bar.
-    func setupNavigationBar(color: UIColor = .systemBackground) {
+    func setupNavigationBar(color: UIColor = .white) {
         navigationController?.navigationBar.barTintColor = color
     }
     
@@ -114,7 +114,9 @@ extension BaseViewController {
     /// Configures the subviews of the controller.
     func setupSubviews() {
         view.backgroundColor = .systemBackground
-        
+
+        setupNavigationBar()
+
         embedSubviews()
         setupConstraints()
     }
