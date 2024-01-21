@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SnapKit
 
 private enum Constants {
     static let fontSize: CGFloat = 16.0
@@ -22,6 +23,17 @@ class BaseTextView: UITextView {
         right: Constants.padding
     )
 
+    private lazy var placeholderLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: Constants.fontSize)
+        label.textColor = .lightGray
+        label.textAlignment = .left
+        label.text = placeholder
+        label.numberOfLines = 0
+
+        return label
+    }()
+
     private var placeholder: String?
 
     // MARK: - init
@@ -36,19 +48,36 @@ class BaseTextView: UITextView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 // MARK: - Setup Subviews
 
-extension BaseTextView {
-    private func setupSubviews() {
-        text = placeholder
+private extension BaseTextView {
+    func setupSubviews() {
+
+        embedSubviews()
+        setupConstraints()
+        updateSubviews()
+
         delegate = self
         textContainerInset = textPadding
         layer.cornerRadius = Constants.cornerRadius
         font = .systemFont(ofSize: Constants.fontSize)
-        textColor = .lightGray
+    }
+
+    func embedSubviews() {
+        addSubviews(placeholderLabel)
+    }
+
+    func updateSubviews() {
+        placeholderLabel.isHidden = hasText
+    }
+
+    func setupConstraints() {
+        placeholderLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(textPadding.left)
+            $0.top.equalToSuperview().inset(textPadding.top)
+        }
     }
 }
 
@@ -56,16 +85,9 @@ extension BaseTextView {
 
 extension BaseTextView: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if textColor == .lightGray {
-            text = ""
-            textColor = .black
-        }
+        placeholderLabel.isHidden = true
     }
-
     func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text.isEmpty {
-            textView.text = placeholder
-            textView.textColor = .lightGray
-        }
+        updateSubviews()
     }
 }

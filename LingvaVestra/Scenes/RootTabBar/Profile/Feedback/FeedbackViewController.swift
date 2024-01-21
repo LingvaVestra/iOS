@@ -11,10 +11,12 @@ private enum Constants {
     static let sendButtonWidth: CGFloat = 200.0
     static let sendButtonHeight: CGFloat = 44.0
     static let cornerRadius: CGFloat = 10.0
-    static let stackViewSpacing: CGFloat = 15
-    static let descriptionFontSize: CGFloat = 12
-    static let horisontalInset: CGFloat = 20
-    static let textViewHeight: CGFloat = 150
+    static let stackViewSpacing: CGFloat = 15.0
+    static let emailLabelSpacing: CGFloat = 3.0
+    static let descriptionFontSize: CGFloat = 12.0
+    static let horisontalInset: CGFloat = 20.0
+    static let textViewHeight: CGFloat = 150.0
+    static let labelFontSize: CGFloat = 12.0
 }
 
 protocol FeedbackViewProtocol: BaseViewProtocol {
@@ -22,7 +24,6 @@ protocol FeedbackViewProtocol: BaseViewProtocol {
     func didReceiveData()
     /// Navigates to rootController of NavigationStack.
     func popToRoot(animated: Bool)
-
 }
 
 final class FeedbackViewController: BaseViewController, UITextViewDelegate {
@@ -37,18 +38,34 @@ final class FeedbackViewController: BaseViewController, UITextViewDelegate {
         label.numberOfLines = .zero
         label.font = .systemFont(ofSize: Constants.descriptionFontSize)
         label.text = Strings.Profile.Feedback.description
+        
         return label
     }()
 
-    private lazy var emailView: EmailView = {
-        let emailView = EmailView(textFieldDelegate: self)
-        return emailView
+    private lazy var emailTextField: BaseTextField = {
+        let textField = BaseTextField()
+        textField.delegate = self
+        textField.placeholder = Strings.Profile.Feedback.emailTextFieldPlaceholder
+
+        return textField
+    }()
+
+    private let emailLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.numberOfLines = .zero
+        label.textColor = .lightGray
+        label.font = .systemFont(ofSize: Constants.labelFontSize)
+        label.text = Strings.Profile.Feedback.emailDescription
+
+        return label
     }()
 
     private let commentaryTextView: BaseTextView = {
         let placeholder = Strings.Profile.Feedback.textViewPlaceholder
         let textView = BaseTextView(placeholder: placeholder)
         textView.iq.placeholder = placeholder
+
         return textView
     }()
 
@@ -56,6 +73,7 @@ final class FeedbackViewController: BaseViewController, UITextViewDelegate {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = Constants.stackViewSpacing
+
         return stackView
     }()
 
@@ -95,13 +113,15 @@ extension FeedbackViewController {
         title = Strings.Profile.Feedback.title
 
         view.backgroundColor = .secondarySystemBackground
+        verticalStack.setCustomSpacing(Constants.emailLabelSpacing, after: emailTextField)
     }
 
     override func embedSubviews() {
 
         verticalStack.addArrangedSubviews(
             descriptionLabel,
-            emailView,
+            emailTextField,
+            emailLabel,
             commentaryTextView
         )
 
