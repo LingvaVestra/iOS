@@ -1,5 +1,0 @@
-//
-//  UITextView+extension.swift
-//  LingvaVestra
-//
-//

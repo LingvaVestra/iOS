@@ -8,21 +8,21 @@ import Foundation
 protocol ProfilePresenterProtocol: BasePresenterProtocol {
     /// Array containing the settings items displayed in the settingsTableView.
     var items: [SettingsItem] { get }
-    
+
     /// Called when the settingsTableView row is tapped.
     func didSelectSettingsRow(item: SettingsItem)
 }
 
 final class ProfilePresenter {
-    
+
     // MARK: - Dependencies
-    
+
     weak var view: ProfileViewProtocol?
-    
+
     private var router: ProfileRouterProtocol
-    
+
     // MARK: - init
-    
+
     init(view: ProfileViewProtocol?, router: ProfileRouterProtocol) {
         self.view = view
         self.router = router
@@ -32,17 +32,17 @@ final class ProfilePresenter {
 // MARK: - Presenter Protocol
 
 extension ProfilePresenter: ProfilePresenterProtocol {
-    
+
     func viewDidLoad() {
         // Logic after loading view, get data from network
         view?.didReceiveData()
     }
-    
+
     /// Array containing the settings items displayed in the settingsTableView.
     var items: [SettingsItem] {
         SettingsItem.allCases
     }
-    
+
     /// Called when the settingsTableView row is tapped.
     func didSelectSettingsRow(item: SettingsItem) {
         switch item {

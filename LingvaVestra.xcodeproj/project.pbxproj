@@ -67,7 +67,6 @@
 		A0BBBE632B59020800FCAD41 /* FeedbackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BBBE622B59020800FCAD41 /* FeedbackPresenter.swift */; };
 		A0BBBE652B59021300FCAD41 /* FeedbackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BBBE642B59021300FCAD41 /* FeedbackRouter.swift */; };
 		A0BBBE672B59021F00FCAD41 /* FeedbackAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BBBE662B59021F00FCAD41 /* FeedbackAssembler.swift */; };
-		A0BBBE692B59108D00FCAD41 /* UITextView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BBBE682B59108D00FCAD41 /* UITextView+extension.swift */; };
 		A0BBBE6B2B5917CF00FCAD41 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BBBE6A2B5917CF00FCAD41 /* BaseTextField.swift */; };
 		A0BBBE6D2B59211F00FCAD41 /* BaseTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BBBE6C2B59211F00FCAD41 /* BaseTextView.swift */; };
 		A0BBBE702B592BE600FCAD41 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A0BBBE6F2B592BE600FCAD41 /* IQKeyboardManagerSwift */; };
@@ -131,7 +130,6 @@
 		A0BBBE622B59020800FCAD41 /* FeedbackPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPresenter.swift; sourceTree = "<group>"; };
 		A0BBBE642B59021300FCAD41 /* FeedbackRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackRouter.swift; sourceTree = "<group>"; };
 		A0BBBE662B59021F00FCAD41 /* FeedbackAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAssembler.swift; sourceTree = "<group>"; };
-		A0BBBE682B59108D00FCAD41 /* UITextView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+extension.swift"; sourceTree = "<group>"; };
 		A0BBBE6A2B5917CF00FCAD41 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		A0BBBE6C2B59211F00FCAD41 /* BaseTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -386,7 +384,6 @@
 				A06894022B3D7786000FA577 /* UIStackView+extension.swift */,
 				A056878A2B4F02CF00811DAC /* UITableViewCell+extension.swift */,
 				A01656B92B5274BE00B7211E /* UITableView+extension.swift */,
-				A0BBBE682B59108D00FCAD41 /* UITextView+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -550,7 +547,6 @@
 				A0A6A6E02B39912D0091C4D7 /* Encodable+extension.swift in Sources */,
 				A05687832B4F01DB00811DAC /* SettingsTableViewCell.swift in Sources */,
 				74A823A42B4DE2A10077935D /* XCAssets+Generated.swift in Sources */,
-				A0BBBE692B59108D00FCAD41 /* UITextView+extension.swift in Sources */,
 				A06B186D2B35C4A900F3FC0B /* LogoutModel.swift in Sources */,
 				A0BBBE672B59021F00FCAD41 /* FeedbackAssembler.swift in Sources */,
 				A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */,
