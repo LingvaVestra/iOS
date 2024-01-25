@@ -32,6 +32,7 @@ internal enum Asset {
     internal static let search = ImageAsset(name: "search")
   }
   internal enum Colors {
+    internal static let greenButtonColor = ColorAsset(name: "greenButtonColor")
     internal static let launchBackground = ColorAsset(name: "launchBackground")
     internal static let orange = ColorAsset(name: "orange")
   }

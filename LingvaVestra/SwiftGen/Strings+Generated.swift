@@ -20,9 +20,25 @@ internal enum Strings {
   internal enum Profile {
     /// v. 1.1
     internal static let version = Strings.tr("Localizable", "Profile.version", fallback: "v. 1.1")
+    internal enum Feedback {
+      /// Нам важно знать ваше мнение, чтобы сделать приложения лучше. Напишите нам свои пожелания или сообщите о возникших проблемах.
+      internal static let description = Strings.tr("Localizable", "Profile.Feedback.description", fallback: "Нам важно знать ваше мнение, чтобы сделать приложения лучше. Напишите нам свои пожелания или сообщите о возникших проблемах.")
+      /// Мы ответим вам
+      internal static let emailDescription = Strings.tr("Localizable", "Profile.Feedback.emailDescription", fallback: "Мы ответим вам")
+      /// Почта
+      internal static let emailTextFieldPlaceholder = Strings.tr("Localizable", "Profile.Feedback.emailTextFieldPlaceholder", fallback: "Почта")
+      /// Отправить
+      internal static let sendButtonTitle = Strings.tr("Localizable", "Profile.Feedback.sendButtonTitle", fallback: "Отправить")
+      /// Комментарий
+      internal static let textViewPlaceholder = Strings.tr("Localizable", "Profile.Feedback.textViewPlaceholder", fallback: "Комментарий")
+      /// Обратная связь
+      internal static let title = Strings.tr("Localizable", "Profile.Feedback.title", fallback: "Обратная связь")
+    }
     internal enum Settings {
       /// Delete Profile
       internal static let deleteProfile = Strings.tr("Localizable", "Profile.Settings.deleteProfile", fallback: "Delete Profile")
+      /// Feedback
+      internal static let feedback = Strings.tr("Localizable", "Profile.Settings.feedback", fallback: "Feedback")
       /// Exit
       internal static let logout = Strings.tr("Localizable", "Profile.Settings.logout", fallback: "Exit")
       /// Rate App
